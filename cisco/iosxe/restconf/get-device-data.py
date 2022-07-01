@@ -32,8 +32,7 @@ class GetDeviceData:
             )
             if response.status_code == 200:
                 data = response.json()
-                print(json.dumps(data, indent=4))
-                return json.dumps(data, indent=4)
+                return data
             else:
                 print(f"Failed - Status Code: {response.status_code}")
                 return f"Failed - Status Code: {response.status_code}"
@@ -55,8 +54,7 @@ class GetDeviceData:
             )
             if response.status_code == 200:
                 data = response.json()
-                print(json.dumps(data, indent=4))
-                return json.dumps(data, indent=4)
+                return data
             else:
                 print(f"Failed - Status Code: {response.status_code}")
                 return f"Failed - Status Code: {response.status_code}"
@@ -79,8 +77,7 @@ class GetDeviceData:
             )
             if response.status_code == 200:
                 data = response.json()
-                print(json.dumps(data, indent=4))
-                return json.dumps(data, indent=4)
+                return data
             else:
                 print(f"Failed - Status Code: {response.status_code}")
                 return f"Failed - Status Code: {response.status_code}"
