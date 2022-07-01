@@ -1,4 +1,4 @@
-from cisco_restconf import GetDeviceData
+from get-device-data import GetDeviceData
 
 
 
