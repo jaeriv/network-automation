@@ -1,12 +1,7 @@
 from orionsdk import SwisClient
 import urllib3
 
-# Change status of IP in SolarWinds IPAM
-
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-# 1 = Used
-# 2 = Available
-# 4 = Reserved 
 
 username = ""
 password = ""
@@ -14,6 +9,12 @@ server = ""
 ip_address = "x.x.x.x"
 
 def change_status():
+    """
+    Change status of IP in SolarWinds IPAM
+    1 = Used
+    2 = Available
+    4 = Reserved 
+    """
     swis = SwisClient(server, username, password, verify=False)
     results = swis.invoke(
         "IPAM.SubnetManagement",
@@ -24,4 +25,4 @@ def change_status():
     print(results)
     return results
 
-change_status()
+# change_status()
